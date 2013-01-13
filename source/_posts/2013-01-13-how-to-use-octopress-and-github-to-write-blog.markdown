@@ -50,12 +50,19 @@ After setup, the publishing steps will be:
 rake new_post["post title"]
 rake generate
 rake deploy
+
+git commit -a -m "new post"
+git push username source
 {% endcodeblock %}
 
 <strong>References:</strong>
-http://octopress.org/docs/setup/
+<br/>
+http://octopress.org/docs/setup/ 
+<br/>
 http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/
+<br/>
 http://www.yangzhiping.com/tech/octopress.html
+<br/>
 
 
 
