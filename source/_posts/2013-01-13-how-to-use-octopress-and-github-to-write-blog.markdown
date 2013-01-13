@@ -55,14 +55,12 @@ git commit -a -m "new post"
 git push username source
 {% endcodeblock %}
 
-<strong>References:</strong>
-<br/>
-http://octopress.org/docs/setup/ 
-<br/>
-http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github/
-<br/>
-http://www.yangzhiping.com/tech/octopress.html
-<br/>
+<strong>References:</strong><br/>
+<ol>
+<li>http://octopress.org/docs/setup/ </li>
+<li>http://blog.devtang.com/blog/2012/02/10/setup-blog-based-on-github</li>
+<li>http://www.yangzhiping.com/tech/octopress.html</li>
+</ol>
 
 
 
