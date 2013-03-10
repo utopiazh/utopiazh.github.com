@@ -4,7 +4,7 @@
   <title><![CDATA[Coding For Fun]]></title>
   <link href="http://utopiazh.github.com/atom.xml" rel="self"/>
   <link href="http://utopiazh.github.com/"/>
-  <updated>2013-03-10T21:03:58+08:00</updated>
+  <updated>2013-03-10T21:06:41+08:00</updated>
   <id>http://utopiazh.github.com/</id>
   <author>
     <name><![CDATA[Hang Zhou]]></name>
@@ -118,8 +118,8 @@ VanderPlas">scikit-learn intro video</a></li>
 <h2>Reference</h2>
 
 <ul>
-<li><a href="ml-class.org" title="ml-class.org">ml-class.org</a></li>
-<li><a href="mloss.org" title="Machine learning open source software">mloss.org</a></li>
+<li><a href="http://ml-class.org" title="ml-class.org">ml-class.org</a></li>
+<li><a href="http://mloss.org" title="Machine learning open source software">mloss.org</a></li>
 </ul>
 
 ]]></content>
