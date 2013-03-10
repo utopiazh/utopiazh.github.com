@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hbase, | Coding For Fun]]></title>
   <link href="http://utopiazh.github.com/blog/categories/hbase/atom.xml" rel="self"/>
   <link href="http://utopiazh.github.com/"/>
-  <updated>2013-03-10T09:52:06+08:00</updated>
+  <updated>2013-03-10T14:45:57+08:00</updated>
   <id>http://utopiazh.github.com/</id>
   <author>
     <name><![CDATA[Hang Zhou]]></name>
@@ -20,10 +20,14 @@
     <id>http://utopiazh.github.com/blog/2013/03/10/multi-tenancies-of-hbase-in-facebook</id>
     <content type="html"><![CDATA[<h1>Overview</h1>
 
-<p>Watched the video for 2 times to get the main point, the highlights learned from this video is:
-+ Use unique message id as ts to store into hbase
-+ Use monitoring/reporting tools to know what exactly the access pattern is, while the app developers don't know either
-+ Use underlying hashout solution to isolate traffic, instead of an optimistic solution of using table names.</p>
+<p>Watched the video for 2 times to get the main point, the highlights learned from this video is:</p>
+
+<ul>
+<li>Use unique message id as ts to store into hbase</li>
+<li>Use monitoring/reporting tools to know what exactly the access pattern is, while the app developers don't know either</li>
+<li>Use underlying hashout solution to isolate traffic, instead of an optimistic solution of using table names.</li>
+</ul>
+
 
 <h1>HBase adoption</h1>
 
