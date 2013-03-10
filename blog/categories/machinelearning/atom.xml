@@ -4,7 +4,7 @@
   <title><![CDATA[Category: machinelearning | Coding For Fun]]></title>
   <link href="http://utopiazh.github.com/blog/categories/machinelearning/atom.xml" rel="self"/>
   <link href="http://utopiazh.github.com/"/>
-  <updated>2013-03-10T20:14:39+08:00</updated>
+  <updated>2013-03-10T20:16:03+08:00</updated>
   <id>http://utopiazh.github.com/</id>
   <author>
     <name><![CDATA[Hang Zhou]]></name>
@@ -101,8 +101,8 @@ C/C++ impl: OpenCV, LIBSVM, LIBLinear</p></li>
 <h2>Reference</h2>
 
 <ul>
-<li>ml-class.org</li>
-<li>mloss.org (Machine learning open source software)</li>
+<li><a href="ml-class.org" title="ml-class.org">ml-class.org</a></li>
+<li><a href="mloss.org" title="Machine learning open source software">mloss.org</a></li>
 </ul>
 
 ]]></content>
