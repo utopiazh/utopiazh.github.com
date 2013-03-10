@@ -22,14 +22,14 @@ rvm rubygems latest
 <h2> 2. Setup Octopress </h2>
 {% codeblock %}
 cd ~/github/
-git clone git://github.com/imathis/octopress.git username.github.com
-cd ~/github/username.github.com
+git clone git://github.com/imathis/octopress.git utopiazh.github.com
+cd ~/github/utopiazh.github.com
 bundle update
 rake install
 {% endcodeblock %}
-<h2> 3. Deploy as username.github.com </h2>
+<h2> 3. Deploy as utopiazh.github.com </h2>
 {% codeblock %}
-git remote add username git@github.com:username/username.github.com.git
+git remote add utopiazh git@github.com:utopiazh/utopiazh.github.com.git
 rake setup_github_pages
 # creaete a test post
 rake new_post["post title"]
@@ -39,7 +39,7 @@ rake deploy
 
 <h2> 4. Commit the source </h2>
 {% codeblock %}
-git push -u username master
+git push -u utopiazh master
 git add .
 git commit -m 'your message'
 git push origin source
@@ -52,7 +52,7 @@ rake generate
 rake deploy
 
 git commit -a -m "new post"
-git push username source
+git push origin source
 {% endcodeblock %}
 
 <strong>References:</strong><br/>
