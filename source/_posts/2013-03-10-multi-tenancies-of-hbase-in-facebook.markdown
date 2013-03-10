@@ -9,6 +9,7 @@ categories: hbase, hadoop
 # Overview
 
 Watched the video for 2 times to get the main point, the highlights learned from this video is:
+
 + Use unique message id as ts to store into hbase
 + Use monitoring/reporting tools to know what exactly the access pattern is, while the app developers don't know either
 + Use underlying hashout solution to isolate traffic, instead of an optimistic solution of using table names.
