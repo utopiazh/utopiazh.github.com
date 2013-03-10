@@ -4,7 +4,7 @@
   <title><![CDATA[Category: hbase, | Coding For Fun]]></title>
   <link href="http://utopiazh.github.com/blog/categories/hbase/atom.xml" rel="self"/>
   <link href="http://utopiazh.github.com/"/>
-  <updated>2013-03-10T09:47:02+08:00</updated>
+  <updated>2013-03-10T09:52:06+08:00</updated>
   <id>http://utopiazh.github.com/</id>
   <author>
     <name><![CDATA[Hang Zhou]]></name>
@@ -29,19 +29,27 @@
 
 <h2>Messages:</h2>
 
-<p><em>Requirements:</em>
-- Very high volume (9B+ msg, 90B r+w ops per day), 4.5 PB no compressed.
-- Elasticity &amp; auto-failover
-- Strong consistency within a data centeer
-- import large data set (old data)</p>
+<p><strong>Requirements:</strong></p>
 
-<p><em>Schema:</em>
-- 3 CF (actions, snapshot (cache), keywords (search))
-- Use message id as timestamp, which leverage the 3rd dimension.
-- Fast iteration on schema 
+<ul>
+<li>Very high volume (9B+ msg, 90B r+w ops per day), 4.5 PB no compressed.</li>
+<li>Elasticity &amp; auto-failover</li>
+<li>Strong consistency within a data centeer</li>
+<li>import large data set (old data)</li>
+</ul>
+
+
+<p><strong>Schema:</strong></p>
+
+<ul>
+<li>3 CF (actions, snapshot (cache), keywords (search))</li>
+<li>Use message id as timestamp, which leverage the 3rd dimension.</li>
+<li>Fast iteration on schema 
     - Action logs are single source of truth
     - Most data during schema iteration from snapshot  and keywords
-    - Custom backup solution (action logs), which could be replayed on schema evolving.</p>
+    - Custom backup solution (action logs), which could be replayed on schema evolving.</li>
+</ul>
+
 
 <h2>ODS (Operational Data Store)</h2>
 
@@ -56,33 +64,47 @@
 
 <h1>HBase best practices</h1>
 
-<p><em>Process:</em>
-Select the right apps: no five nines, etc.</p>
+<p><strong>Process:</strong></p>
+
+<p>Select the right apps: no five nines, etc.</p>
 
 <p>Shadow testing before going production (real traffic goes in and out without noticed by users).</p>
 
-<p><em>Schema Design</em>
-One CF or Multiple CF: common issue is putting all data into one CF, so get poor spatial locality </p>
+<p><strong>Schema Design</strong></p>
+
+<p>One CF or Multiple CF: common issue is putting all data into one CF, so get poor spatial locality </p>
 
 <p>New table or New CF: New CF provides better locality, e.g. users message and search, the best user experience is that all users data is complete available or down</p>
 
-<p><em>Lessons:</em>
-Need graph/reporting monitoring to provide insights
-Constant upgrade (facebook is running HBase 0.89 with back-ported patches)</p>
+<p><strong>Lessons:</strong></p>
+
+<ul>
+<li>Need graph/reporting monitoring to provide insights</li>
+<li>Constant upgrade (facebook is running HBase 0.89 with back-ported patches)</li>
+</ul>
+
 
 <h1>Multi-Tenants</h1>
 
-<p><em>optimistic multi-tenancies</em>
-- let users do the right things
-- lack of table naming rules</p>
+<p><strong>optimistic multi-tenancies</strong></p>
 
-<p><em>Hashout:</em>
-- Was for Mysql, ported to support HBase
-- review every app
-- block abusive users, promote heave users
-- users must provide app id and key, system app id to specific shard
-- backed reading ops with memcached
-- intensive MR job on separate cluster</p>
+<ul>
+<li>let users do the right things</li>
+<li>lack of table naming rules</li>
+</ul>
+
+
+<p><strong>Hashout:</strong></p>
+
+<ul>
+<li>Was for Mysql, ported to support HBase</li>
+<li>review every app</li>
+<li>block abusive users, promote heave users</li>
+<li>users must provide app id and key, system app id to specific shard</li>
+<li>backed reading ops with memcached</li>
+<li>intensive MR job on separate cluster</li>
+</ul>
+
 
 <h1>Reference</h1>
 
