@@ -96,24 +96,24 @@
 <div class="entry-content"><h1>Overview</h1>
 
 <p>Watched the video for 2 times to get the main point, the highlights learned from this video is:
-+  Use unique message id as ts to store into hbase
-+  Use monitoring/reporting tools to know what exactly the access pattern is, while the app developers don&#8217;t know either
-+  Use underlying hashout solution to isolate traffic, instead of an optimistic solution of using table names.</p>
++ Use unique message id as ts to store into hbase
++ Use monitoring/reporting tools to know what exactly the access pattern is, while the app developers don&#8217;t know either
++ Use underlying hashout solution to isolate traffic, instead of an optimistic solution of using table names.</p>
 
 <h1>HBase adoption</h1>
 
 <h2>Messages:</h2>
 
 <p><em>Requirements:</em>
--  Very high volume (9B+ msg, 90B r+w ops per day), 4.5 PB no compressed.
--  Elasticity &amp; auto-failover
--  Strong consistency within a data centeer
--  import large data set (old data)</p>
+- Very high volume (9B+ msg, 90B r+w ops per day), 4.5 PB no compressed.
+- Elasticity &amp; auto-failover
+- Strong consistency within a data centeer
+- import large data set (old data)</p>
 
 <p><em>Schema:</em>
--  3 CF (actions, snapshot (cache), keywords (search))
--  Use message id as timestamp, which leverage the 3rd dimension.
--  Fast iteration on schema 
+- 3 CF (actions, snapshot (cache), keywords (search))
+- Use message id as timestamp, which leverage the 3rd dimension.
+- Fast iteration on schema 
     - Action logs are single source of truth
     - Most data during schema iteration from snapshot  and keywords
     - Custom backup solution (action logs), which could be replayed on schema evolving.</p>
@@ -148,16 +148,16 @@ Constant upgrade (facebook is running HBase 0.89 with back-ported patches)</p>
 <h1>Multi-Tenants</h1>
 
 <p><em>optimistic multi-tenancies</em>
--  let users do the right things
--  lack of table naming rules</p>
+- let users do the right things
+- lack of table naming rules</p>
 
 <p><em>Hashout:</em>
--  Was for Mysql, ported to support HBase
--  review every app
--  block abusive users, promote heave users
--  users must provide app id and key, system app id to specific shard
--  backed reading ops with memcached
--  intensive MR job on separate cluster</p>
+- Was for Mysql, ported to support HBase
+- review every app
+- block abusive users, promote heave users
+- users must provide app id and key, system app id to specific shard
+- backed reading ops with memcached
+- intensive MR job on separate cluster</p>
 
 <h1>Reference</h1>
 
