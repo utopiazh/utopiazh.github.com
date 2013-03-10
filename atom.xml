@@ -4,7 +4,7 @@
   <title><![CDATA[Coding For Fun]]></title>
   <link href="http://utopiazh.github.com/atom.xml" rel="self"/>
   <link href="http://utopiazh.github.com/"/>
-  <updated>2013-03-10T20:12:37+08:00</updated>
+  <updated>2013-03-10T20:14:39+08:00</updated>
   <id>http://utopiazh.github.com/</id>
   <author>
     <name><![CDATA[Hang Zhou]]></name>
@@ -21,7 +21,7 @@
     <content type="html"><![CDATA[<p>Notes for video <a href="http://www.youtube.com/watch?v=__s45TTXxps">Practical Machine Learning in
 Python</a>.</p>
 
-<p><strong>Example: Home-runs and strikeouts predicating</strong></p>
+<p><strong>Example: Home-runs and strikeouts predicting</strong></p>
 
 <p>Questions:</p>
 
@@ -92,8 +92,9 @@ C/C++ impl: OpenCV, LIBSVM, LIBLinear</p></li>
 <h2>TODO</h2>
 
 <ul>
-<li>Chi-square</li>
-<li>scikit-learn</li>
+<li>[ ] Chi-square</li>
+<li>[ ] scikit-learn</li>
+<li>[ ] mdp-toolkit</li>
 </ul>
 
 
