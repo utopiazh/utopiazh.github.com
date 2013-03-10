@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://utopiazh.github.com/atom.xml" rel="self"/>
+  <link href="http://utopiazh.github.com/"/>
+  <updated>2013-03-10T08:33:22+08:00</updated>
+  <id>http://utopiazh.github.com/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Configure Ubuntu with Dual Monitor]]></title>
+    <link href="http://utopiazh.github.com/blog/2013/03/10/configure-ubuntu-with-dual-monitor/"/>
+    <updated>2013-03-10T08:17:00+08:00</updated>
+    <id>http://utopiazh.github.com/blog/2013/03/10/configure-ubuntu-with-dual-monitor</id>
+    <content type="html"><![CDATA[<h2>Background</h2>
+
+<p>After installing Ubuntu and enabling dual monitor, the default layout is:</p>
+
+<pre><code>Laptop --&gt; LCD Monitor with HDMI
+</code></pre>
+
+<p>while my placement of monitors are:</p>
+
+<pre><code>LCD Monitor with HDMI --&gt; Laptop
+</code></pre>
+
+<h2>Solution</h2>
+
+<p>Searched around the web, and found the issue could be resolved by a simple xrand script:</p>
+
+<p>&#8221;&#8217;</p>
+
+<h1>!/bin/sh</h1>
+
+<p>if [ &#8220;$1&#8221; != &#8220;off&#8221; ]; then
+  # External Screen as HDMI, Laptop below
+  echo &#8220;Dual Screen on&#8221;
+  xrandr &#8211;output VGA1 &#8211;off
+  xrandr &#8211;output HDMI1 &#8211;primary &#8211;mode 1920x1080
+  xrandr &#8211;output LVDS1 &#8211;off
+  xrandr &#8211;output LVDS1 &#8211;mode 1600x900 &#8211;right-of HDMI1
+else
+  # External Screen off, Laptop primary
+  echo &#8220;Dual Screen off&#8221;
+  xrandr &#8211;output HDMI1 &#8211;off
+  xrandr &#8211;output LVDS1 &#8211;primary &#8211;mode 1600x900
+fi
+&#8221;&#8217;</p>
+
+<p>Save the script as dual_monitor, and add the directory into $PATH. To stop using dual monitor, run:
+&#8221;&#8217;
+dual_monitor off
+&#8221;&#8217;
+To start using dual monitor, run:
+&#8221;&#8217;
+dual_monitor
+&#8221;&#8217;</p>
+
+<h2>Reference</h2>
+
+<ul>
+<li>[Setting primary monitor on dual display] http://ubuntuforums.org/showthread.php?t=1801549</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
