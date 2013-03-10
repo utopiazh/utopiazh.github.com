@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Configure Ubuntu with Dual Monitor - Coding For Fun</title>
+  <title>Category: hadoop - Coding For Fun</title>
   <meta name="author" content="Hang Zhou">
 
   
-  <meta name="description" content="Goals: Setting ubuntu monitor like this: LCD with HDMI --&gt; Laptop Monitor Solutions: Create a xrandr script, named as dual_monitor: #!/bin/sh
-if &hellip;">
+  <meta name="description" content="Category: hadoop">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@ if &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://utopiazh.github.com/blog/2013/03/10/configure-ubuntu-with-dual-monitor/">
+  <link rel="canonical" href="http://utopiazh.github.comblog/categories/hadoop/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -66,154 +65,35 @@ if &hellip;">
   <div id="main">
     <div id="content">
       <div>
-<article class="hentry" role="article">
+<article role="article">
   
   <header>
-    
-      <h1 class="entry-title">Configure Ubuntu With Dual Monitor</h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-10T09:11:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2013</time>
-        
-      </p>
+    <h1 class="entry-title">Category: Hadoop</h1>
     
   </header>
+  
+  <div id="blog-archives" class="category">
 
 
-<div class="entry-content"><h2>Goals:</h2>
 
-<p>Setting ubuntu monitor like this:</p>
+  
+  <h2>2013</h2>
 
-<pre><code>LCD with HDMI --&gt; Laptop Monitor
-</code></pre>
+<article>
+  
+<h1><a href="/blog/2013/03/10/multi-tenancies-of-hbase-in-facebook/">Multi-tenant of HBase in FaceBook</a></h1>
+<time datetime="2013-03-10T09:24:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>10</span> <span class='year'>2013</span></time>
 
-<h2>Solutions:</h2>
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/hadoop/'>hadoop</a>, <a class='category' href='/blog/categories/hbase/'>hbase,</a></span>
+</footer>
 
-<p>Create a xrandr script, named as <code>dual_monitor</code>:</p>
 
-<pre><code>#!/bin/sh
-if [ "$1" != "off" ]; then
-  # External Screen as HDMI, Laptop below
-  echo "Dual Screen on"
-  xrandr --output VGA1 --off
-  xrandr --output HDMI1 --primary --mode 1920x1080
-  xrandr --output LVDS1 --off
-  xrandr --output LVDS1 --mode 1600x900 --right-of HDMI1
-else
-  # External Screen off, Laptop primary
-  echo "Dual Screen off"
-  xrandr --output HDMI1 --off
-  xrandr --output LVDS1 --primary --mode 1600x900
-fi
-</code></pre>
-
-<p>To use it conveniently, add the directory into $PATH.</p>
-
-<p>Start dual monitor mode with:</p>
-
-<pre><code>dual_monitor
-</code></pre>
-
-<p>Stop dual monitor mode with:</p>
-
-<pre><code>dual_monitor off
-</code></pre>
-
-<h2>Reference</h2>
-
-<ul>
-<li><a href="http://ubuntuforums.org/showthread.php?t=1801549" title="Setting primary monitor on dual display">AskUbuntu:&#8221;Setting primary monitor on dual display&#8221;</a></li>
-</ul>
+</article>
 
 </div>
 
-
-  <footer>
-    <p class="meta">
-      
   
-
-<span class="byline author vcard">Posted by <span class="fn">Hang Zhou</span></span>
-
-      
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-03-10T09:11:00+08:00" pubdate data-updated="true">Mar 10<span>th</span>, 2013</time>
-      
-
-<span class="categories">
-  
-    <a class='category' href='/blog/categories/linux/'>linux</a>
-  
-</span>
-
-
-    </p>
-    
-      <div class="sharing">
-  
-  
-  
-  
-    <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-    <a class="jiathis_button_qzone"></a>
-    <a class="jiathis_button_tsina"></a>
-    <a class="jiathis_button_tqq"></a>
-    <a class="jiathis_button_renren"></a>
-    <a class="jiathis_button_kaixin001"></a>
-    <a href="http://www.jiathis.com/share"
-        class="jiathis jiathis_txt jtico
-        jtico_jiathis" target="_blank"></a>
-    <a class="jiathis_counter_style"></a>
-</div>
-<script type="text/javascript"
-    src="http://v3.jiathis.com/code/jia.js?uid=1358053663737765"
-    charset="utf-8"></script>
-<!-- JiaThis Button END -->
-
-<!-- UY BEGIN -->
-<div id="uyan_frame"></div>
-<script type="text/javascript" id="UYScript"
-    src="http://v1.uyan.cc/js/iframe.js?UYUserId=1731955" async=""></script>
-<!-- UY END -->
-
-  
- 
-</div>
-
-    
-    <p class="meta">
-      
-        <a class="basic-alignment left" href="/blog/2013/01/13/how-to-use-octopress-and-github-to-write-blog/" title="Previous Post: How to use octopress and github to write blog">&laquo; How to use octopress and github to write blog</a>
-      
-      
-        <a class="basic-alignment right" href="/blog/2013/03/10/multi-tenancies-of-hbase-in-facebook/" title="Next Post: Multi-tenant of HBase in FaceBook">Multi-tenant of HBase in FaceBook &raquo;</a>
-      
-    </p>
-  </footer>
 </article>
 
 </div>
