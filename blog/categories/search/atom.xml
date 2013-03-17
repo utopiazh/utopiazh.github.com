@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: search | Coding For Fun]]></title>
+  <link href="http://utopiazh.github.com/blog/categories/search/atom.xml" rel="self"/>
+  <link href="http://utopiazh.github.com/"/>
+  <updated>2013-03-17T10:55:50+08:00</updated>
+  <id>http://utopiazh.github.com/</id>
+  <author>
+    <name><![CDATA[Hang Zhou]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[CodeReading: SolrCloud - Sharding]]></title>
+    <link href="http://utopiazh.github.com/blog/2013/03/10/codereading-solrcloud-sharding/"/>
+    <updated>2013-03-10T21:20:00+08:00</updated>
+    <id>http://utopiazh.github.com/blog/2013/03/10/codereading-solrcloud-sharding</id>
+    <content type="html"><![CDATA[<h1>Working in progress</h1>
+]]></content>
+  </entry>
+  
+</feed>

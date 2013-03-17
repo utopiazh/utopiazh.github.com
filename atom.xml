@@ -4,7 +4,7 @@
   <title><![CDATA[Coding For Fun]]></title>
   <link href="http://utopiazh.github.com/atom.xml" rel="self"/>
   <link href="http://utopiazh.github.com/"/>
-  <updated>2013-03-10T21:15:08+08:00</updated>
+  <updated>2013-03-17T10:55:50+08:00</updated>
   <id>http://utopiazh.github.com/</id>
   <author>
     <name><![CDATA[Hang Zhou]]></name>
@@ -12,6 +12,75 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Configure Sharded MongoDB on single host]]></title>
+    <link href="http://utopiazh.github.com/blog/2013/03/17/configure-sharded-mongodb-on-single-host/"/>
+    <updated>2013-03-17T10:54:00+08:00</updated>
+    <id>http://utopiazh.github.com/blog/2013/03/17/configure-sharded-mongodb-on-single-host</id>
+    <content type="html"><![CDATA[<h1>Configure Sharded MongoDB on single host</h1>
+
+<p>The default configuration of mongodb only use a single thread, which will be
+bottleneck.</p>
+
+<h2>Config and Start mongodb</h2>
+
+<p>Start 3 config server</p>
+
+<pre><code>mongod --configsvr --dbpath /var/lib/mongodb/configdb/27019 --port 27019 --logpath /var/log/mongodb/mongod-27019.log --logappend &amp;
+mongod --configsvr --dbpath /var/lib/mongodb/configdb/27119 --port 27119 --logpath /var/log/mongodb/mongod-27119.log --logappend &amp;
+mongod --configsvr --dbpath /var/lib/mongodb/configdb/27219 --port 27219 --logpath /var/log/mongodb/mongod-27219.log --logappend &amp;
+</code></pre>
+
+<p>Start 3 data server</p>
+
+<pre><code>mongod --dbpath /var/lib/mongodb/datadb/27029 --port 27029 --logpath /var/log/mongodb/mongod-27029.log --logappend &amp;
+mongod --dbpath /var/lib/mongodb/datadb/27129 --port 27129 --logpath /var/log/mongodb/mongod-27129.log --logappend &amp;
+mongod --dbpath /var/lib/mongodb/datadb/27229 --port 27229 --logpath /var/log/mongodb/mongod-27229.log --logappend &amp;
+</code></pre>
+
+<p>Start mongos server</p>
+
+<pre><code>mongos --configdb 127.0.0.1:27019,127.0.0.1:27119,127.0.0.1:27219 --port 27017 --logpath /var/log/mongodb/mongos-27017.log --logappend &amp;
+</code></pre>
+
+<h2>Add shard for standalone mongod</h2>
+
+<p>Connect to mongos</p>
+
+<pre><code># mongo
+MongoDB shell version: 2.0.6
+connecting to: test
+mongos&gt; sh.addShard("127.0.0.1:27029")
+mongos&gt; sh.addShard("127.0.0.1:27129")
+mongos&gt; sh.addShard("127.0.0.1:27229")
+</code></pre>
+
+<p>Enable shard for DB</p>
+
+<p>   mongos> sh.enableSharding(&#8220;github&#8221;)</p>
+
+<p>Create Index on the to-be-sharded key</p>
+
+<pre><code>mongos&gt; use github 
+mongos&gt; db.repos.ensureIndex({"id" :1})
+</code></pre>
+
+<p>Enable shard for collection</p>
+
+<pre><code>mongos&gt; sh.shardCollection("github.repos", {"id": 1})
+</code></pre>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[CodeReading: SolrCloud - Sharding]]></title>
+    <link href="http://utopiazh.github.com/blog/2013/03/10/codereading-solrcloud-sharding/"/>
+    <updated>2013-03-10T21:20:00+08:00</updated>
+    <id>http://utopiazh.github.com/blog/2013/03/10/codereading-solrcloud-sharding</id>
+    <content type="html"><![CDATA[<h1>Working in progress</h1>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Notes:Practical Machine Learning in Python]]></title>
