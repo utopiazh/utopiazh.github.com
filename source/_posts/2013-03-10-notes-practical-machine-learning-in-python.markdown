@@ -39,17 +39,17 @@ Questions:
 + External bindings of popular packages
 + Python Implementation
   
-  NLTK focus on NLP (Natural Lanaguage Processing with Python)
-  mlpy
-  PyML (SVM)
-  PyBrain
-  mdp-toolkit (abstraction over workflow)
-  scikit-learn (manager algorithms, active community)
+    NLTK focus on NLP (Natural Lanaguage Processing with Python)
+    mlpy
+    PyML (SVM)
+    PyBrain
+    mdp-toolkit (abstraction over workflow)
+    scikit-learn (manager algorithms, active community)
 
 + DIY with Bascic building blocks
 
-  Python impl:  NumPy, SciPy
-  C/C++ impl: OpenCV, LIBSVM, LIBLinear
+    Python impl:  NumPy, SciPy
+    C/C++ impl: OpenCV, LIBSVM, LIBLinear
 
 **Feature Selection**
   
