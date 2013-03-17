@@ -4,7 +4,7 @@
   <title><![CDATA[Coding For Fun]]></title>
   <link href="http://utopiazh.github.com/atom.xml" rel="self"/>
   <link href="http://utopiazh.github.com/"/>
-  <updated>2013-03-17T10:55:50+08:00</updated>
+  <updated>2013-03-17T10:56:52+08:00</updated>
   <id>http://utopiazh.github.com/</id>
   <author>
     <name><![CDATA[Hang Zhou]]></name>
@@ -18,9 +18,7 @@
     <link href="http://utopiazh.github.com/blog/2013/03/17/configure-sharded-mongodb-on-single-host/"/>
     <updated>2013-03-17T10:54:00+08:00</updated>
     <id>http://utopiazh.github.com/blog/2013/03/17/configure-sharded-mongodb-on-single-host</id>
-    <content type="html"><![CDATA[<h1>Configure Sharded MongoDB on single host</h1>
-
-<p>The default configuration of mongodb only use a single thread, which will be
+    <content type="html"><![CDATA[<p>The default configuration of mongodb only use a single thread, which will be
 bottleneck.</p>
 
 <h2>Config and Start mongodb</h2>
